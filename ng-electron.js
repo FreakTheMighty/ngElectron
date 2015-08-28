@@ -49,6 +49,8 @@ angular.module('ngElectron', [])
   o.browserWindow   = o.require('browser-window');
   o.clipboard       = o.require('clipboard');
   o.dialog          = o.require('dialog');
+  o.dialog          = o.require('dialog');
+  o.globalShortcut  = o.require('global-shortcut');
   o.menu            = o.require('menu');
   o.menuItem        = o.require('menu-item');
   o.nativeImage     = o.require('native-image');
