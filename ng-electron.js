@@ -26,7 +26,7 @@ angular.module('ngElectron', [])
   };
 
   //diskdb
-  o.db = function( collection ) {
+  o.db = function( pathToFolder, collection ) {
     if ( diskdb ) {
       var collection_arr = [];
       if (typeof collection == 'object') {
@@ -35,7 +35,7 @@ angular.module('ngElectron', [])
         collection_arr.push( collection );
       }
 
-      return diskdb.connect(db_silo, collection_arr);
+      return diskdb.connect(pathToFolder, collection_arr);
     }
 
     return 'diskdb is not installed and/or configured.'
